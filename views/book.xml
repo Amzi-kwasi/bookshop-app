@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="bookshop_app.list">
+            <field name="name">book tree view</field>
+            <field name="model">book</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="author" />
+                    <field name="year" />
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="bookshop_app.action_window">
+            <field name="name">Bookshop</field>
+            <field name="res_model">book</field>
+            <field name="view_mode">tree,form,kanban</field>
+        </record>
+        <menuitem name="Book" id="bookshop_app.menu_1" parent="bookshop_app.menu_root" action="bookshop_app.action_window" />
+        <!-- form view -->
+        <record model="ir.ui.view" id="book_form_view">
+            <field name="name">book form view</field>
+            <field name="model">book</field>
+            <field name="arch" type="xml">
+                <form string="Test">
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="author" />
+                            <field name="year" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

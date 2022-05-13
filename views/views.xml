@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="bookshop_app.list">
+      <field name="name">bookshop_app list</field>
+      <field name="model">bookshop_app.bookshop_app</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="bookshop_app.action_window">
+      <field name="name">bookshop_app window</field>
+      <field name="res_model">bookshop_app.bookshop_app</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="bookshop_app.action_server">
+      <field name="name">bookshop_app server</field>
+      <field name="model_id" ref="model_bookshop_app_bookshop_app"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="bookshop_app" id="bookshop_app.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="bookshop_app.menu_1" parent="bookshop_app.menu_root"/>
+    <menuitem name="Menu 2" id="bookshop_app.menu_2" parent="bookshop_app.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="bookshop_app.menu_1_list" parent="bookshop_app.menu_1"
+              action="bookshop_app.action_window"/>
+    <menuitem name="Server to list" id="bookshop_app" parent="bookshop_app.menu_2"
+              action="bookshop_app.action_server"/>
+-->
+  </data>
+</odoo>
